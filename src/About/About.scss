@@ -1,0 +1,120 @@
+.about {
+    position: relative;
+    padding: 120px 0;
+    background: #0f0f0f;
+    color: #fff;
+    overflow: hidden;
+
+    &__container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 48px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 96px;
+        align-items: center;
+    }
+
+    &__content {
+        max-width: 600px;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform, opacity;
+    }
+
+    &__badge {
+        display: inline-block;
+        background: #facc15;
+        color: #000;
+        font-weight: 600;
+        padding: 6px 16px;
+        border-radius: 999px;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 1.2;
+        font-weight: 800;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        font-size: 18px;
+        color: #cfcfcf;
+        line-height: 1.8;
+        margin-bottom: 20px;
+
+        &:last-of-type {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__stats {
+        display: flex;
+        gap: 48px;
+        margin-top: 40px;
+    }
+
+    &__stat {
+        text-align: center;
+    }
+
+    &__stat-number {
+        font-size: 48px;
+        font-weight: 800;
+        color: #facc15;
+        margin-bottom: 8px;
+    }
+
+    &__stat-label {
+        font-size: 16px;
+        color: #cfcfcf;
+    }
+
+    &__visual {
+        position: relative;
+    }
+
+    &__image-wrapper {
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform, opacity;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        display: block;
+        user-select: none;
+    }
+
+    @media (max-width: 768px) {
+        padding: 80px 0;
+
+        &__container {
+            padding: 0 24px;
+        }
+
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__stats {
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+}
+
